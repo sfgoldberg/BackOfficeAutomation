@@ -73,11 +73,6 @@ namespace Back_Office_Automation
             Instance.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(15));
         }
 
-        private static void TurnOffWait()
-        {
-            Instance.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(0));
-        }
-
         #endregion
     }
 }

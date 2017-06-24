@@ -1,7 +1,4 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-namespace Back_Office_Automation.Objects
+﻿namespace Back_Office_Automation.Objects
 {
     class Page
     {
