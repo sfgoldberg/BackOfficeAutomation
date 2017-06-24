@@ -9,7 +9,6 @@ namespace Back_Office_Automation.Tests.Southwest
     public class BookFlightTest : BaseTest
     {
         [TestMethod]
-        [DeploymentItem("chromedriver.exe")]
         [Description("Test Case 1, User goes to Kayak.com to book a flight from Washington (Dulles), DC (IAD) to Los Angeles, CA (LAX) departing any date and returning one week later.")]
         [TestCategory("southwest_bookFlight")]
 
@@ -35,8 +34,8 @@ namespace Back_Office_Automation.Tests.Southwest
                 Assert.AreEqual(SearchFlightsListingPage.Title, Page.PageTitle(),"Search Flights listing page title is not as expected");
                 SearchFlightsListingPage.SelectDepartingFlight();
                 SearchFlightsListingPage.SelectReturnFlight();
-                Driver.Wait(2);
                 SearchFlightsListingPage.ClickContinueBtn();
+                Driver.Wait(2);
                 Assert.AreEqual(PriceReservationsPage.Title, Page.PageTitle(),"Price Reservations page title is not as expected");
                 PriceReservationsPage.ClickContinue();
                 Assert.AreEqual(BookReservationsPage.Title, Page.PageTitle(),"Book Reservations page title is not as expected");
